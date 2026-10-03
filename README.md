@@ -4,10 +4,10 @@ Web pública de Aberturas Avenida, Santa Fe.
 
 ## Superficies
 
-- **Inicio**: entrada visual con dos recorridos.
+- **Inicio**: entrada visual mobile-first con dos recorridos.
 - **Revisión**: flujo de 6 pasos para preparar una visita de medición.
-- **Productos**: catálogo visual con pedido sin pago online.
-- **WhatsApp**: contacto persistente y envío del carrito al número confirmado por el usuario.
+- **Productos**: catálogo visual con carrito de consulta, sin pago online.
+- **WhatsApp**: contacto persistente y envío del pedido al número comercial.
 - **Gestión**: vista interna disponible con `?owner=1`, fuera de la navegación pública.
 
 ## Principios
@@ -15,12 +15,22 @@ Web pública de Aberturas Avenida, Santa Fe.
 - Cero claims de IA.
 - Cero pasarela de pago.
 - El carrito arma una consulta; el cierre ocurre por WhatsApp.
-- Los datos de medición del cliente son orientativos.
+- Las medidas informadas por el cliente son orientativas.
 - La medición final se completa en obra.
 
-## Web
+## Producción
 
-https://aberturasavenida.simondalmasso44.workers.dev/
+- Principal: https://aberturasavenida.simondalmasso44.workers.dev/
+- Redirect: https://aberturas-avenida.web.app/
+
+El backend permanece en Cloudflare. Firebase Hosting sólo mantiene el redirect 302 documentado en `firebase.json`.
+
+## QA
+
+```powershell
+./tests/ui-contract.ps1
+./tests/http-smoke.ps1
+```
 
 ## Deploy
 

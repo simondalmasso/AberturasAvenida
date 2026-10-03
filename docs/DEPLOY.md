@@ -1,35 +1,39 @@
 # Deploy
 
-## Requisitos
+## Producción principal
 
-- Node.js
-- cuenta Cloudflare autorizada para Workers
+Cloudflare Worker: `aberturasavenida`
 
-## Verificar bundle
+URL:
+https://aberturasavenida.simondalmasso44.workers.dev/
 
+## Verificar
+
+```bash
 npx --yes wrangler@4.145.0 deploy --dry-run
+```
+
+```powershell
+./tests/ui-contract.ps1
+./tests/http-smoke.ps1
+```
 
 ## Publicar
 
+```bash
 npx --yes wrangler@4.145.0 deploy
+```
 
-Worker: aberturasavenida
+Después del deploy se vuelve a ejecutar el smoke test y QA visual en 320/390/1440.
 
-URL pública:
-https://aberturasavenida.simondalmasso44.workers.dev/
+## Firebase
+
+`https://aberturas-avenida.web.app/` se usa únicamente como redirect 302 hacia el Worker. No aloja backend ni proxy. La configuración reproducible está en `firebase.json`.
 
 ## Última versión verificada
 
-Version ID desplegado el 2 de octubre de 2026:
-c9220ff2-9e1d-4d70-92e2-4a953e67b45a
-
-## Smoke checks
-
-- HTTP 200.
-- 6 categorías con imagen cargada.
-- CTA Continuar deshabilitado sin selección.
-- LISTO muestra horarios compatibles.
-- REVISIÓN TÉCNICA no muestra horarios.
-- SIN TURNO no muestra horarios y aclara que no es revisión técnica.
-- Vista Dueño abre Ficha de Medición.
-- Sin overflow horizontal a 320 px y 390 px.
+- Fecha: 2026-10-02
+- Cloudflare Version ID: `1caee183-4bf5-418d-a08a-f9147e47eb7a`
+- Smoke HTTP: PASS
+- Lighthouse mobile: Accessibility 100 / Best Practices 96 / SEO 100 / Agentic Browsing 100
+- Lighthouse desktop: Accessibility 100 / Best Practices 96 / SEO 100 / Agentic Browsing 100

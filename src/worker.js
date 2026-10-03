@@ -4,7 +4,19 @@ const HTML = String.raw`<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#F4F1EB">
-<title>Aberturas Avenida — Santa Fe</title>
+<meta name="description" content="Aberturas Avenida en Santa Fe: revisión de aberturas, puertas, ventanas, mosquiteros, cortinas, portones y soluciones a medida. Consultá por WhatsApp.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://aberturasavenida.simondalmasso44.workers.dev/">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/simondalmasso/AberturasAvenida/main/public/brand/avenida-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Aberturas Avenida | Santa Fe">
+<meta property="og:description" content="Revisión de aberturas y catálogo de puertas, ventanas, mosquiteros, cortinas, portones y soluciones a medida.">
+<meta property="og:url" content="https://aberturasavenida.simondalmasso44.workers.dev/">
+<meta property="og:image" content="https://images.pexels.com/photos/12792317/pexels-photo-12792317.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<meta name="twitter:card" content="summary_large_image">
+<title>Aberturas Avenida | Puertas, ventanas y aberturas en Santa Fe</title>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","@id":"https://aberturasavenida.simondalmasso44.workers.dev/#business","name":"Aberturas Avenida","url":"https://aberturasavenida.simondalmasso44.workers.dev/","telephone":"+54 9 3425 23-6559","areaServed":"Santa Fe, Argentina","sameAs":["https://www.instagram.com/aberturasavenida.sf/"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -225,7 +237,7 @@ input,select{width:100%;min-height:48px;border:1px solid var(--line);border-radi
 <body>
 <header class="topbar">
   <div class="topbar-inner">
-    <button class="brand" data-view="home" aria-label="Ir al inicio">
+    <button class="brand" data-view="home">
       <img src="https://raw.githubusercontent.com/simondalmasso/AberturasAvenida/main/public/brand/avenida-logo.png" alt="">
       <span class="brand-copy"><strong>Aberturas Avenida</strong><span>Santa Fe · desde el local a tu obra</span></span>
     </button>
@@ -233,7 +245,7 @@ input,select{width:100%;min-height:48px;border:1px solid var(--line);border-radi
       <button class="nav-link on" data-view="home">Inicio</button>
       <button class="nav-link" data-view="review">Revisión</button>
       <button class="nav-link" data-view="products">Productos</button>
-      <button class="cart-top" id="cartTop" aria-label="Abrir carrito">Pedido <span class="cart-count" id="cartCount">0</span></button>
+      <button class="cart-top" id="cartTop">Pedido <span class="cart-count" id="cartCount">0</span></button>
     </nav>
   </div>
 </header>
@@ -241,7 +253,7 @@ input,select{width:100%;min-height:48px;border:1px solid var(--line);border-radi
 <main class="shell">
   <section class="view on" id="homeView">
     <div class="home-hero">
-      <img class="hero-image" src="https://images.pexels.com/photos/12792317/pexels-photo-12792317.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="">
+      <img class="hero-image" crossorigin="anonymous" src="https://images.pexels.com/photos/12792317/pexels-photo-12792317.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/12792317/pexels-photo-12792317.jpeg?auto=compress&cs=tinysrgb&w=720 720w, https://images.pexels.com/photos/12792317/pexels-photo-12792317.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w, https://images.pexels.com/photos/12792317/pexels-photo-12792317.jpeg?auto=compress&cs=tinysrgb&w=1800 1800w" sizes="100vw" fetchpriority="high" alt="">
       <div class="hero-copy">
         <div class="eyebrow">Aberturas Avenida · Santa Fe</div>
         <h1>Abrí tu casa a <em>algo mejor.</em></h1>
@@ -249,12 +261,12 @@ input,select{width:100%;min-height:48px;border:1px solid var(--line);border-radi
     </div>
     <div class="home-choices">
       <button class="home-choice" data-view="review">
-        <img src="https://images.pexels.com/photos/28772360/pexels-photo-28772360.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+        <img crossorigin="anonymous" src="https://images.pexels.com/photos/28772360/pexels-photo-28772360.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/28772360/pexels-photo-28772360.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/28772360/pexels-photo-28772360.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/28772360/pexels-photo-28772360.jpeg?auto=compress&cs=tinysrgb&w=1400 1400w" sizes="(max-width:720px) 50vw, 50vw" alt="">
         <span class="arrow">↗</span>
         <div class="home-choice-content"><small>01 · Servicio</small><h2>Revisión</h2></div>
       </button>
       <button class="home-choice" data-view="products">
-        <img src="https://images.pexels.com/photos/16246068/pexels-photo-16246068.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+        <img crossorigin="anonymous" src="https://images.pexels.com/photos/16246068/pexels-photo-16246068.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/16246068/pexels-photo-16246068.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/16246068/pexels-photo-16246068.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/16246068/pexels-photo-16246068.jpeg?auto=compress&cs=tinysrgb&w=1400 1400w" sizes="(max-width:720px) 50vw, 50vw" alt="">
         <span class="arrow">↗</span>
         <div class="home-choice-content"><small>02 · Catálogo</small><h2>Productos</h2></div>
       </button>
@@ -417,7 +429,7 @@ function addProgress(){
   q("#progHint").textContent=["Abertura","Foto","Medidas","Detalle","Acceso","Resultado"][S.step];
 }
 function categoryStep(){
-  var cards=categories.map(function(x){return '<button class="category '+(S.type===x?"sel":"")+'" data-type="'+x+'" aria-pressed="'+(S.type===x?'true':'false')+'"><span class="category-media"><img src="'+categoryImages[x]+'" alt="" loading="eager"></span><strong>'+x+'</strong></button>'}).join("");
+  var cards=categories.map(function(x){return '<button class="category '+(S.type===x?"sel":"")+'" data-type="'+x+'" aria-pressed="'+(S.type===x?'true':'false')+'"><span class="category-media"><img src="'+categoryImages[x]+'" alt="" loading="lazy" decoding="async"></span><strong>'+x+'</strong></button>'}).join("");
   return '<div class="step-label">01 · Abertura</div><h2>¿Qué querés revisar?</h2><p class="lede">Elegí la opción que mejor describe el trabajo.</p><div class="categories">'+cards+'</div><div class="actions one"><button class="btn" data-next '+(S.type?"":"disabled")+'>Continuar</button></div>';
 }
 function photoStep(){
@@ -530,12 +542,51 @@ renderAgenda();renderFilters();renderProducts();renderCart();render();if(new URL
 </body>
 </html>`;
 
+const ROBOTS = 'User-agent: *\nAllow: /\n\nSitemap: https://aberturasavenida.simondalmasso44.workers.dev/sitemap.xml\n';
+const SITEMAP = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>https://aberturasavenida.simondalmasso44.workers.dev/</loc>\n  </url>\n</urlset>\n';
+const LLMS = '# Aberturas Avenida\n\nSitio de Aberturas Avenida en Santa Fe, Argentina.\n\n## Contenido\n\n- Inicio: acceso a Revisión y Productos.\n- Revisión: prepara una visita con foto, medidas orientativas por unidad, material, acceso y contacto.\n- Productos: catálogo orientativo sin pago online; el pedido se coordina por WhatsApp.\n- Las medidas cargadas por el cliente son orientativas. La medición final se completa en obra.\n\n## Enlace principal\n\n- [Aberturas Avenida](https://aberturasavenida.simondalmasso44.workers.dev/)\n';
+const BRAND_URL = "https://raw.githubusercontent.com/simondalmasso/AberturasAvenida/main/public/brand/avenida-logo.png";
+
+const baseHeaders = {
+  "x-content-type-options":"nosniff",
+  "referrer-policy":"strict-origin-when-cross-origin",
+  "x-frame-options":"DENY"
+};
+
+function response(body, status, contentType, cacheControl) {
+  return new Response(body, {
+    status,
+    headers: {
+      ...baseHeaders,
+      "content-type": contentType,
+      "cache-control": cacheControl
+    }
+  });
+}
+
 export default {
   async fetch(request) {
     const url = new URL(request.url);
-    if (url.pathname === "/health") {
-      return new Response(JSON.stringify({ok:true,service:"aberturasavenida"}), {headers:{"content-type":"application/json; charset=utf-8","cache-control":"no-store"}});
+    const path = url.pathname;
+
+    if (path === "/health") {
+      return response(JSON.stringify({ok:true,service:"aberturasavenida"}), 200, "application/json; charset=utf-8", "no-store");
     }
-    return new Response(HTML, {headers:{"content-type":"text/html; charset=utf-8","cache-control":"no-store","x-content-type-options":"nosniff","referrer-policy":"strict-origin-when-cross-origin"}});
+    if (path === "/robots.txt") {
+      return response(ROBOTS, 200, "text/plain; charset=utf-8", "public, max-age=3600");
+    }
+    if (path === "/sitemap.xml") {
+      return response(SITEMAP, 200, "application/xml; charset=utf-8", "public, max-age=3600");
+    }
+    if (path === "/llms.txt") {
+      return response(LLMS, 200, "text/markdown; charset=utf-8", "public, max-age=3600");
+    }
+    if (path === "/favicon.ico") {
+      return Response.redirect(BRAND_URL, 302);
+    }
+    if (path === "/" || path === "/index.html") {
+      return response(HTML, 200, "text/html; charset=utf-8", "public, max-age=300, stale-while-revalidate=3600");
+    }
+    return response("404 — No encontrado", 404, "text/plain; charset=utf-8", "no-store");
   }
 };
