@@ -1,0 +1,9 @@
+.wrangler/
+node_modules/
+.env
+.env.*
+*.log
+*.bak.*
+qa-*.html
+qa-*.mjs
+prototype.html

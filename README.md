@@ -1,36 +1,30 @@
 # Aberturas Avenida
 
-Aplicación web para preparar una visita de medición antes de coordinarla.
+Web pública de Aberturas Avenida, Santa Fe.
 
-## Estado
+## Superficies
 
-- Cliente: flujo de 6 pasos con foto, medidas orientativas y datos de acceso.
-- Reglas determinísticas: **LISTO**, **REVISIÓN TÉCNICA** y **SIN TURNO**.
-- Horarios simulados según duración requerida.
-- Vista Dueño con visitas preparadas.
-- Ficha de Medición A4 imprimible.
-- Deploy público en Cloudflare Workers.
+- **Inicio**: entrada visual con dos recorridos.
+- **Revisión**: flujo de 6 pasos para preparar una visita de medición.
+- **Productos**: catálogo visual con pedido sin pago online.
+- **WhatsApp**: contacto persistente y envío del carrito al número confirmado por el usuario.
+- **Gestión**: vista interna disponible con `?owner=1`, fuera de la navegación pública.
+
+## Principios
+
+- Cero claims de IA.
+- Cero pasarela de pago.
+- El carrito arma una consulta; el cierre ocurre por WhatsApp.
+- Los datos de medición del cliente son orientativos.
+- La medición final se completa en obra.
 
 ## Web
 
 https://aberturasavenida.simondalmasso44.workers.dev/
 
-## Principio central
-
-Los datos informados por el cliente son **orientativos**. La **medición final en obra** queda separada y se completa por el técnico.
-
-## Estructura
-
-- `src/worker.js`: aplicación y Worker de Cloudflare.
-- `wrangler.jsonc`: configuración de deploy.
-- `docs/`: decisiones de producto, reglas y fuentes de assets.
-- `evidence/`: capturas de QA de la versión publicada.
-- `archive/`: snapshots históricos útiles.
-
 ## Deploy
 
 ```bash
-npx wrangler deploy
+npx --yes wrangler@4.145.0 deploy --dry-run
+npx --yes wrangler@4.145.0 deploy
 ```
-
-No se incluyen credenciales ni secretos en el repositorio.
