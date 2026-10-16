@@ -1,39 +1,38 @@
 # Deploy
 
-## Producción principal
+## Producción
 
-Cloudflare Worker: `aberturasavenida`
+Worker de Cloudflare: aberturasavenida
 
-URL:
+URL principal:
 https://aberturasavenida.simondalmasso44.workers.dev/
 
-## Verificar
+El backend permanece en Cloudflare. Firebase Hosting sólo mantiene el redirect 302 de https://aberturas-avenida.web.app/; no se modifica como parte de este deploy.
 
-```bash
-npx --yes wrangler@4.145.0 deploy --dry-run
-```
+## Preflight
 
-```powershell
-./tests/ui-contract.ps1
-./tests/http-smoke.ps1
-```
+Desde la raíz del repositorio, ejecutar:
+
+- ./tests/ui-contract.ps1
+- ./tests/images-contract.ps1
+- ./tests/http-smoke.ps1
+- npx --yes wrangler@4.145.0 deploy --dry-run
 
 ## Publicar
 
-```bash
-npx --yes wrangler@4.145.0 deploy
-```
+Ejecutar:
 
-Después del deploy se vuelve a ejecutar el smoke test y QA visual en 320/390/1440.
+- npx --yes wrangler@4.145.0 deploy
+- ./tests/http-smoke.ps1
 
-## Firebase
+Comprobar también que las imágenes principales respondan 200 con image/webp:
 
-`https://aberturas-avenida.web.app/` se usa únicamente como redirect 302 hacia el Worker. No aloja backend ni proxy. La configuración reproducible está en `firebase.json`.
+- /categories/puerta.webp
+- /categories/ventana.webp
+- /categories/porton.webp
+- /products/puerta-placa.webp
+- /products/ventana-corrediza-entera.webp
 
-## Última versión verificada
+## QA visual
 
-- Fecha: 2026-10-02
-- Cloudflare Version ID: `1caee183-4bf5-418d-a08a-f9147e47eb7a`
-- Smoke HTTP: PASS
-- Lighthouse mobile: Accessibility 100 / Best Practices 96 / SEO 100 / Agentic Browsing 100
-- Lighthouse desktop: Accessibility 100 / Best Practices 96 / SEO 100 / Agentic Browsing 100
+Validar en 320 px, 390 px y 1440 px. En móvil deben verse los dos recorridos de Inicio, el catálogo debe dividirse en Puertas y Ventanas, no debe existir overflow horizontal y el carrito debe abrir el mensaje de pedido en WhatsApp. No hay pasarela de pago.

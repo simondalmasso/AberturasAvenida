@@ -2,5 +2,9 @@
   "name": "aberturasavenida",
   "main": "src/worker.js",
   "compatibility_date": "2026-09-30",
-  "workers_dev": true
+  "workers_dev": true,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  }
 }
