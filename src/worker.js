@@ -4,16 +4,16 @@ const HTML = String.raw`<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#F4F1EB">
-<meta name="description" content="Aberturas Avenida en Santa Fe: revisión de aberturas, puertas, ventanas, mosquiteros, cortinas, portones y soluciones a medida. Consultá por WhatsApp.">
+<meta name="description" content="Puertas de catálogo, portones de aluminio, ventanas, cortinas roller y mosquiteros en Santa Fe. Consultas por WhatsApp.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://aberturasavenida.simondalmasso44.workers.dev/">
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/simondalmasso/AberturasAvenida/main/public/brand/avenida-logo.png">
+<link rel="icon" type="image/png" href="/brand/avenida-logo.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Aberturas Avenida | Santa Fe">
-<meta property="og:description" content="Revisión de aberturas y catálogo de puertas, ventanas, mosquiteros, cortinas, portones y soluciones a medida.">
+<meta property="og:description" content="Puertas de catálogo, portones de aluminio, ventanas, cortinas roller y mosquiteros en Santa Fe. Consultas por WhatsApp.">
 <meta property="og:url" content="https://aberturasavenida.simondalmasso44.workers.dev/">
-<meta property="og:image" content="https://images.pexels.com/photos/12792317/pexels-photo-12792317.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<meta property="og:image" content="https://aberturasavenida.simondalmasso44.workers.dev/categories/porton.webp">
 <meta name="twitter:card" content="summary_large_image">
 <title>Aberturas Avenida | Puertas, ventanas y aberturas en Santa Fe</title>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","@id":"https://aberturasavenida.simondalmasso44.workers.dev/#business","name":"Aberturas Avenida","url":"https://aberturasavenida.simondalmasso44.workers.dev/","telephone":"+54 9 3425 23-6559","areaServed":"Santa Fe, Argentina","sameAs":["https://www.instagram.com/aberturasavenida.sf/"]}</script>
@@ -163,9 +163,18 @@ input,select{width:100%;min-height:48px;border:1px solid var(--line);border-radi
 .filter-btn{border:1px solid var(--line);background:rgba(255,255,255,.45);border-radius:999px;padding:9px 13px;white-space:nowrap;font-size:11px}
 .filter-btn.on{background:var(--ink);border-color:var(--ink);color:#fff}
 .product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#productGrid{display:flex;flex-direction:column;gap:34px}
+.catalog-group{min-width:0}
+.catalog-group-head{display:grid;grid-template-columns:1fr auto;align-items:end;gap:5px 12px;margin:0 0 14px}
+.catalog-group-head .eyebrow{grid-column:1/-1;font-size:9px;letter-spacing:.13em}
+.catalog-group-head h3{font-family:var(--display);font-size:clamp(28px,4vw,42px);font-weight:400;line-height:1;margin:0}
+.catalog-count{font-size:10px;color:var(--muted);white-space:nowrap}
+.catalog-group-grid{width:100%}
+
 .product-card{background:transparent;border:0;border-radius:24px;overflow:hidden;min-width:0;transition:transform .2s ease}
 .product-card:hover{transform:translateY(-3px)}
 .product-media{aspect-ratio:4/5;overflow:hidden;background:#E7E0D5;border-radius:24px}
+.product-card.wide .product-media{aspect-ratio:4/3}
 .product-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
 .product-card:hover img{transform:scale(1.03)}
 .product-body{padding:11px 2px 4px}
@@ -225,9 +234,9 @@ input,select{width:100%;min-height:48px;border:1px solid var(--line);border-radi
   .home-hero{min-height:620px}.home-choices{grid-template-columns:1fr 1fr}.review-layout{grid-template-columns:1fr}.review-aside{position:relative;top:0;min-height:0}.review-aside .mini-line{margin-top:34px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.owner-shell{grid-template-columns:1fr}.owner-side{order:-1}
 }
 @media(max-width:720px){
-  body{padding-bottom:76px}.topbar-inner{min-height:66px;padding:8px 14px}.brand img{width:44px;height:44px}.brand-copy strong{font-size:20px}.brand-copy span,.main-nav .nav-link,.owner-top{display:none}.main-nav{padding:0;border:0;background:none;gap:5px}.cart-top{min-height:38px;padding:0 10px}.shell{padding:14px 12px 70px}#homeView.on{display:flex;flex-direction:column;min-height:calc(100dvh - 150px)}.home-hero{min-height:220px;height:220px;flex:0 0 220px;border-radius:22px}.hero-copy{left:18px;right:18px;bottom:16px}.hero-copy .eyebrow{font-size:8px}.hero-copy h1{font-size:clamp(38px,11.5vw,52px);line-height:.84;margin-top:5px;max-width:100%}.hero-copy h1 em{display:block}.home-choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;flex:1}.home-choice{min-height:0;height:100%;border-radius:20px}.home-choice-content{padding:16px}.home-choice small{font-size:8px}.home-choice h2{font-size:36px}.home-choice .arrow{width:38px;height:38px;right:12px;top:12px}.section-head{display:block;margin-bottom:20px}.section-head p{margin-top:13px}.back-home{margin-top:16px}.review-aside{display:none}.wizard{border-radius:22px}.wiz-body{padding:22px 14px 16px}.wiz-head{padding-inline:14px}.categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.category{border-radius:15px}.measure-grid{grid-template-columns:1fr}.slots{grid-template-columns:1fr}.product-grid{grid-template-columns:1fr;gap:14px}.product-card{border-radius:18px}.product-body{padding:11px}.product-body h3{font-size:23px}.product-body p{min-height:0}.product-actions{display:grid;grid-template-columns:1fr}.add-btn{width:100%}.wa-fab{right:14px;bottom:86px;width:54px;height:54px}.mobile-nav{position:fixed;z-index:78;left:10px;right:10px;bottom:10px;height:58px;border-radius:999px;background:rgba(18,18,15,.94);display:grid;grid-template-columns:repeat(3,1fr);padding:5px;box-shadow:0 14px 38px rgba(0,0,0,.22);backdrop-filter:blur(12px)}.mobile-nav button{border:0;background:transparent;color:rgba(255,255,255,.62);border-radius:999px;font-size:10px;font-weight:700}.mobile-nav button.on{background:white;color:var(--ink)}.footer{display:none}.owner-title h1{font-size:48px}.job{grid-template-columns:90px 1fr}.job .btn{grid-column:1/-1}.sheet{padding:13px}.sheet-grid{grid-template-columns:1fr}.sheet-photo{border-right:0;border-bottom:1px solid #111}.sheet-top{display:block}.sheet-code{text-align:left;margin-top:10px}.orientative,.final-grid{grid-template-columns:1fr}.measure-box,.final-box{border-right:0}.cart-drawer{width:100%}
+  body{padding-bottom:76px}.topbar-inner{min-height:66px;padding:8px 14px}.brand img{width:44px;height:44px}.brand-copy strong{font-size:20px}.brand-copy span,.main-nav .nav-link,.owner-top{display:none}.main-nav{padding:0;border:0;background:none;gap:5px}.cart-top{min-height:38px;padding:0 10px}.shell{padding:14px 12px 70px}#homeView.on{display:flex;flex-direction:column;min-height:calc(100dvh - 150px)}.home-hero{min-height:220px;height:220px;flex:0 0 220px;border-radius:22px}.hero-copy{left:18px;right:18px;bottom:16px}.hero-copy .eyebrow{font-size:8px}.hero-copy h1{font-size:clamp(38px,11.5vw,52px);line-height:.84;margin-top:5px;max-width:100%}.hero-copy h1 em{display:block}.home-choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;flex:1}.home-choice{min-height:0;height:100%;border-radius:20px}.home-choice-content{padding:16px}.home-choice small{font-size:8px}.home-choice h2{font-size:36px}.home-choice .arrow{width:38px;height:38px;right:12px;top:12px}.section-head{display:block;margin-bottom:20px}.section-head p{margin-top:13px}.back-home{margin-top:16px}.review-aside{display:none}.wizard{border-radius:22px}.wiz-body{padding:22px 14px 16px}.wiz-head{padding-inline:14px}.categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.category{border-radius:15px}.measure-grid{grid-template-columns:1fr}.slots{grid-template-columns:1fr}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-card{border-radius:16px}.product-body{padding:8px 1px}.product-body h3{font-size:17px;line-height:1.12}.product-body p{min-height:0}.product-actions{display:grid;grid-template-columns:1fr;gap:8px}.consult-price{font-size:10px;line-height:1.3}.add-btn{width:100%;min-height:42px;padding:9px 8px;font-size:11px}.wa-fab{right:14px;bottom:86px;width:54px;height:54px}.mobile-nav{position:fixed;z-index:78;left:10px;right:10px;bottom:10px;height:58px;border-radius:999px;background:rgba(18,18,15,.94);display:grid;grid-template-columns:repeat(3,1fr);padding:5px;box-shadow:0 14px 38px rgba(0,0,0,.22);backdrop-filter:blur(12px)}.mobile-nav button{border:0;background:transparent;color:rgba(255,255,255,.62);border-radius:999px;font-size:10px;font-weight:700}.mobile-nav button.on{background:white;color:var(--ink)}.footer{display:none}.owner-title h1{font-size:48px}.job{grid-template-columns:90px 1fr}.job .btn{grid-column:1/-1}.sheet{padding:13px}.sheet-grid{grid-template-columns:1fr}.sheet-photo{border-right:0;border-bottom:1px solid #111}.sheet-top{display:block}.sheet-code{text-align:left;margin-top:10px}.orientative,.final-grid{grid-template-columns:1fr}.measure-box,.final-box{border-right:0}.cart-drawer{width:100%}
 }
-@media(max-width:390px){.product-grid{grid-template-columns:1fr}#homeView.on{min-height:calc(100dvh - 148px)}.home-hero{min-height:205px;height:205px;flex-basis:205px}.home-choice{min-height:0}.home-choice h2{font-size:34px}}
+@media(max-width:390px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.product-body h3{font-size:16px}.product-media{border-radius:15px}#homeView.on{min-height:calc(100dvh - 148px)}.home-hero{min-height:205px;height:205px;flex-basis:205px}.home-choice{min-height:0}.home-choice h2{font-size:34px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{
   body{background:#fff;padding:0}.topbar,.wa-fab,.mobile-nav,.footer,.owner-title,.owner-side,.job-list{display:none!important}.shell{padding:0;max-width:none}.view{display:none!important}#ownerView.on{display:block!important}.owner-shell{display:block}.sheet{border:0;max-width:none;padding:10mm}.sheet-actions{display:none}
@@ -238,7 +247,7 @@ input,select{width:100%;min-height:48px;border:1px solid var(--line);border-radi
 <header class="topbar">
   <div class="topbar-inner">
     <button class="brand" data-view="home">
-      <img src="https://raw.githubusercontent.com/simondalmasso/AberturasAvenida/main/public/brand/avenida-logo.png" alt="">
+      <img src="/brand/avenida-logo.png" alt="">
       <span class="brand-copy"><strong>Aberturas Avenida</strong><span>Santa Fe · desde el local a tu obra</span></span>
     </button>
     <nav class="main-nav" aria-label="Navegación principal">
@@ -261,12 +270,12 @@ input,select{width:100%;min-height:48px;border:1px solid var(--line);border-radi
     </div>
     <div class="home-choices">
       <button class="home-choice" data-view="review">
-        <img crossorigin="anonymous" src="https://images.pexels.com/photos/28772360/pexels-photo-28772360.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/28772360/pexels-photo-28772360.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/28772360/pexels-photo-28772360.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/28772360/pexels-photo-28772360.jpeg?auto=compress&cs=tinysrgb&w=1400 1400w" sizes="(max-width:720px) 50vw, 50vw" alt="">
+        <img src="/categories/puerta.webp" alt="" loading="lazy" decoding="async">
         <span class="arrow">↗</span>
         <div class="home-choice-content"><small>01 · Servicio</small><h2>Revisión</h2></div>
       </button>
       <button class="home-choice" data-view="products">
-        <img crossorigin="anonymous" src="https://images.pexels.com/photos/16246068/pexels-photo-16246068.jpeg?auto=compress&cs=tinysrgb&w=900" srcset="https://images.pexels.com/photos/16246068/pexels-photo-16246068.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/16246068/pexels-photo-16246068.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/16246068/pexels-photo-16246068.jpeg?auto=compress&cs=tinysrgb&w=1400 1400w" sizes="(max-width:720px) 50vw, 50vw" alt="">
+        <img src="/categories/porton.webp" alt="" loading="lazy" decoding="async">
         <span class="arrow">↗</span>
         <div class="home-choice-content"><small>02 · Catálogo</small><h2>Productos</h2></div>
       </button>
@@ -299,7 +308,7 @@ input,select{width:100%;min-height:48px;border:1px solid var(--line);border-radi
         <div class="eyebrow">Filtrar</div>
         <h2>Encontrá tu abertura.</h2>
         <div class="filter-list" id="filters"></div>
-        <p class="catalog-note">El catálogo resume líneas y trabajos que el comercio ofrece públicamente: aberturas de madera y aluminio, trabajo a medida, colocación, mosquiteros, mamparas y soluciones afines. Disponibilidad y precio se confirman por WhatsApp.</p>
+        <p class="catalog-note">Modelos de catálogo y referencias visuales. Medidas, precio y disponibilidad se confirman por WhatsApp.</p>
       </aside>
       <div class="product-grid" id="productGrid"></div>
     </div>
@@ -346,12 +355,12 @@ var esc=function(v){return String(v==null?"":v).replace(/[&<>"']/g,function(c){r
 
 var categories=["Cerramiento","Puerta","Mosquitera","Cortina","Ventana","Portón"];
 var categoryImages={
-  "Cerramiento":"https://images.pexels.com/photos/13573495/pexels-photo-13573495.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "Puerta":"https://windowworx.co.uk/wp-content/uploads/2024/04/S-500-internal-shot-with-door-handle-scaled.jpeg",
-  "Mosquitera":"https://images.unsplash.com/photo-1758998222336-d48b2390a686?auto=format&fit=crop&fm=jpg&q=82&w=1400",
-  "Cortina":"https://roletni-shtori.com/assets/img/thermo-plus-52-standart.png",
-  "Ventana":"https://images.squarespace-cdn.com/content/v1/6511a315b0b3ea009e4b6cde/63c09e6d-fdf4-4b38-babd-c3155daf28ea/Barbara%2BJuniper24-min.jpg",
-  "Portón":"https://assets.zyrosite.com/BXmQyysSVq0xy5AS/disea--o3-porton-deslizable-negro-de-paneles-9s3H30hKhAHnpgsq.png"
+  "Cerramiento":"/categories/cerramiento.webp",
+  "Puerta":"/categories/puerta.webp",
+  "Mosquitera":"/products/mosquitera-enrollable.webp",
+  "Cortina":"/products/cortina-roller.webp",
+  "Ventana":"/categories/ventana.webp",
+  "Portón":"/categories/porton.webp"
 };
 var base={"Cerramiento":60,"Puerta":60,"Mosquitera":45,"Cortina":45,"Ventana":45,"Portón":90};
 function futureWeekday(offset){
@@ -370,18 +379,22 @@ var S={step:0,type:null,photo:null,photoQuality:null,complete:false,qty:1,measur
 var live=null;
 
 var products=[
-  {id:"ventana-modena",name:"Ventana corrediza",category:"Ventanas",meta:"Aluminio · Módena / A30",desc:"Corrediza de aluminio para vivienda, a medida y con opciones de colocación.",img:"https://images.squarespace-cdn.com/content/v1/6511a315b0b3ea009e4b6cde/63c09e6d-fdf4-4b38-babd-c3155daf28ea/Barbara%2BJuniper24-min.jpg"},
-  {id:"puerta-madera",name:"Puerta",category:"Puertas",meta:"Madera / aluminio · a medida",desc:"Puertas y marcos para interior o exterior. Terminación a coordinar.",img:"https://windowworx.co.uk/wp-content/uploads/2024/04/S-500-internal-shot-with-door-handle-scaled.jpeg"},
-  {id:"mosquitero",name:"Mosquitero",category:"Mosquiteros",meta:"Fijo / enrollable · a medida",desc:"Solución limpia para ventanas y puertas. Medida y sistema se confirman por WhatsApp.",img:"https://images.unsplash.com/photo-1758998222336-d48b2390a686?auto=format&fit=crop&fm=jpg&q=82&w=1400"},
-  {id:"cortina",name:"Cortina de enrollar",category:"Cortinas",meta:"Reparación / recambio",desc:"Consulta por cortinas, persianas y recambios compatibles con tu abertura.",img:"https://roletni-shtori.com/assets/img/thermo-plus-52-standart.png"},
-  {id:"porton",name:"Portón",category:"Portones",meta:"Aluminio / herrería",desc:"Portones y soluciones de acceso exterior. Diseño y medida según obra.",img:"https://assets.zyrosite.com/BXmQyysSVq0xy5AS/disea--o3-porton-deslizable-negro-de-paneles-9s3H30hKhAHnpgsq.png"},
-  {id:"mampara",name:"Mampara de baño",category:"Mamparas",meta:"Vidrio + perfilería",desc:"Mamparas y cerramientos de baño con medida final en obra.",img:"https://images.pexels.com/photos/37331168/pexels-photo-37331168.jpeg?auto=compress&cs=tinysrgb&w=1200"},
-  {id:"cerramiento",name:"Cerramiento",category:"Cerramientos",meta:"Galería / patio · a medida",desc:"Cerramientos para ampliar protección y uso de galerías, patios y ambientes.",img:"https://images.pexels.com/photos/13573495/pexels-photo-13573495.jpeg?auto=compress&cs=tinysrgb&w=1200"},
-  {id:"perfiles",name:"Solución a medida",category:"A medida",meta:"Aluminio · madera · obra",desc:"Si no entra en una categoría, armamos la consulta con medidas y uso previsto.",img:"https://images.pexels.com/photos/9729566/pexels-photo-9729566.jpeg?auto=compress&cs=tinysrgb&w=1200"}
+  {id:"puerta-placa",name:"Puerta placa",group:"Puertas",category:"Puertas",meta:"Modelos M157 / M158",img:"/products/puerta-placa.webp"},
+  {id:"puerta-m118",name:"Puerta M118",group:"Puertas",category:"Puertas",meta:"Modelo de catálogo · consultar",img:"/products/puerta-m118.webp"},
+  {id:"puerta-madera",name:"Puerta de madera",group:"Puertas",category:"Puertas",meta:"M4 tableros · catálogo",img:"/products/puerta-madera-m4.webp"},
+  {id:"puerta-chapa",name:"Puerta M218",group:"Puertas",category:"Puertas",meta:"Modelo de catálogo · consultar",img:"/products/puerta-chapa-m218.webp"},
+  {id:"porton",name:"Portón de aluminio",group:"Puertas",category:"Portones",meta:"Modelos blanco / negro · catálogo",img:"/products/porton-aluminio-blanco.webp",wide:true},
+  {id:"porton-negro",name:"Portón de aluminio · negro",group:"Puertas",category:"Portones",meta:"Tablero liso con insertos · catálogo",img:"/products/porton-aluminio-negro.webp",wide:true},
+  {id:"ventana-modena",name:"Ventana corrediza",group:"Ventanas",category:"Ventanas",meta:"Vidrio entero · catálogo",img:"/products/ventana-corrediza-entera.webp",wide:true},
+  {id:"cerramiento",name:"Puerta ventana",group:"Ventanas",category:"Cerramientos",meta:"Vidrio apaisado · catálogo",img:"/products/puerta-ventana-apaisada.webp",wide:true},
+  {id:"mosquitero",name:"Mosquitero enrollable",group:"Ventanas",category:"Complementos",meta:"Referencia visual · confirmar modelo",img:"/products/mosquitera-enrollable.webp",wide:true},
+  {id:"cortina",name:"Cortina roller",group:"Ventanas",category:"Complementos",meta:"Referencia visual · confirmar modelo",img:"/products/cortina-roller.webp",wide:true}
 ];
 var activeFilter="Todos";
 var cart=[];
 try{cart=JSON.parse(localStorage.getItem("aa-cart")||"[]")}catch(e){cart=[]}
+cart=cart.filter(function(item){return item&&products.some(function(p){return p.id===item.id})});
+try{localStorage.setItem("aa-cart",JSON.stringify(cart))}catch(e){}
 
 function showView(name){
   var ids={home:"homeView",review:"reviewView",products:"productsView",owner:"ownerView"};
@@ -501,20 +514,27 @@ function jobs(){
 function sheet(j){
   var photo=j.photo?'<img src="'+j.photo+'" alt="Foto del pedido">':'<div class="placeholder">FOTO DEL PEDIDO<br>sin imagen en demo</div>';
   var measures=(j.measurements||[]).map(function(m,i){return '<div class="measure-box"><b>Unidad '+(i+1)+' · ancho informado</b><strong>'+esc(m.w)+' cm</strong></div><div class="measure-box"><b>Unidad '+(i+1)+' · alto informado</b><strong>'+esc(m.h)+' cm</strong></div>'}).join("");
-  q("#sheet").innerHTML='<article class="sheet"><div class="sheet-top"><div class="sheet-brand"><img src="https://raw.githubusercontent.com/simondalmasso/AberturasAvenida/main/public/brand/avenida-logo.png" alt=""><div><div class="eyebrow">Aberturas Avenida</div><h2>Ficha de medición</h2></div></div><div class="sheet-code">TRABAJO '+esc(j.id)+'<br>'+statusName(j.status)+'<br>'+j.duration+' MIN</div></div><div class="sheet-grid"><div class="sheet-photo">'+photo+'</div><div class="sheet-data"><div class="sheet-row"><b>Cliente</b><span>'+esc(j.name)+'</span></div><div class="sheet-row"><b>Localidad</b><span>'+esc(j.zone)+'</span></div><div class="sheet-row"><b>Abertura</b><span>'+esc(j.type)+'</span></div><div class="sheet-row"><b>Material</b><span>'+esc(j.material)+'</span></div><div class="sheet-row"><b>Cantidad</b><span>'+j.qty+' u.</span></div><div class="sheet-row"><b>Acceso</b><span>'+esc(j.access)+'</span></div><div class="sheet-row"><b>Necesidad</b><span>'+esc(j.need)+'</span></div></div></div><section class="band"><h3>INFORMADO POR EL CLIENTE — ORIENTATIVO</h3><div class="orientative">'+measures+'</div><p class="sheet-note">Datos orientativos para preparar la visita. No son medidas de fabricación.</p></section><section class="band black"><h3>MEDICIÓN FINAL EN OBRA — A COMPLETAR POR EL TÉCNICO</h3><div class="final-grid"><div class="final-box"><b>Ancho final</b><div></div></div><div class="final-box"><b>Alto final</b><div></div></div><div class="final-box"><b>Marco / premarco</b><div></div></div><div class="final-box"><b>Sentido / apertura</b><div></div></div><div class="final-box"><b>Material confirmado</b><div></div></div><div class="final-box"><b>Observaciones</b><div></div></div><div class="final-box"><b>Técnico / firma</b><div></div></div><div class="final-box"><b>Fecha</b><div></div></div></div></section><div class="sheet-actions"><button class="btn alt" onclick="window.print()">Imprimir ficha</button></div></article>';
+  q("#sheet").innerHTML='<article class="sheet"><div class="sheet-top"><div class="sheet-brand"><img src="/brand/avenida-logo.png" alt=""><div><div class="eyebrow">Aberturas Avenida</div><h2>Ficha de medición</h2></div></div><div class="sheet-code">TRABAJO '+esc(j.id)+'<br>'+statusName(j.status)+'<br>'+j.duration+' MIN</div></div><div class="sheet-grid"><div class="sheet-photo">'+photo+'</div><div class="sheet-data"><div class="sheet-row"><b>Cliente</b><span>'+esc(j.name)+'</span></div><div class="sheet-row"><b>Localidad</b><span>'+esc(j.zone)+'</span></div><div class="sheet-row"><b>Abertura</b><span>'+esc(j.type)+'</span></div><div class="sheet-row"><b>Material</b><span>'+esc(j.material)+'</span></div><div class="sheet-row"><b>Cantidad</b><span>'+j.qty+' u.</span></div><div class="sheet-row"><b>Acceso</b><span>'+esc(j.access)+'</span></div><div class="sheet-row"><b>Necesidad</b><span>'+esc(j.need)+'</span></div></div></div><section class="band"><h3>INFORMADO POR EL CLIENTE — ORIENTATIVO</h3><div class="orientative">'+measures+'</div><p class="sheet-note">Datos orientativos para preparar la visita. No son medidas de fabricación.</p></section><section class="band black"><h3>MEDICIÓN FINAL EN OBRA — A COMPLETAR POR EL TÉCNICO</h3><div class="final-grid"><div class="final-box"><b>Ancho final</b><div></div></div><div class="final-box"><b>Alto final</b><div></div></div><div class="final-box"><b>Marco / premarco</b><div></div></div><div class="final-box"><b>Sentido / apertura</b><div></div></div><div class="final-box"><b>Material confirmado</b><div></div></div><div class="final-box"><b>Observaciones</b><div></div></div><div class="final-box"><b>Técnico / firma</b><div></div></div><div class="final-box"><b>Fecha</b><div></div></div></div></section><div class="sheet-actions"><button class="btn alt" onclick="window.print()">Imprimir ficha</button></div></article>';
   q("#sheet").scrollIntoView({behavior:"smooth",block:"start"});
 }
 
 function persistCart(){localStorage.setItem("aa-cart",JSON.stringify(cart));renderCart()}
 function cartTotalQty(){return cart.reduce(function(n,x){return n+x.qty},0)}
 function renderFilters(){
-  var cats=["Todos"].concat(products.map(function(p){return p.category}).filter(function(v,i,a){return a.indexOf(v)===i}));
-  q("#filters").innerHTML=cats.map(function(c){return '<button class="filter-btn '+(activeFilter===c?"on":"")+'" data-filter="'+c+'">'+c+'</button>'}).join("");
+  var groups=["Todos","Puertas","Ventanas"];
+  q("#filters").innerHTML=groups.map(function(c){return '<button class="filter-btn '+(activeFilter===c?"on":"")+'" data-filter="'+c+'">'+c+'</button>'}).join("");
   qa("[data-filter]").forEach(function(b){b.onclick=function(){activeFilter=b.getAttribute("data-filter");renderFilters();renderProducts()}});
 }
+function renderProductCards(list){
+  return list.map(function(p){return '<article class="product-card '+(p.wide?"wide":"")+'"><div class="product-media"><img src="'+p.img+'" alt="'+p.name+'" loading="lazy" decoding="async"></div><div class="product-body"><div class="product-kicker"><span>'+p.category+'</span><span>Consultar</span></div><h3>'+p.name+'</h3><div class="product-actions"><span class="consult-price">'+p.meta+'</span><button class="add-btn" data-add="'+p.id+'">Agregar +</button></div></div></article>'}).join("");
+}
 function renderProducts(){
-  var list=activeFilter==="Todos"?products:products.filter(function(p){return p.category===activeFilter});
-  q("#productGrid").innerHTML=list.map(function(p){return '<article class="product-card"><div class="product-media"><img src="'+p.img+'" alt="" loading="lazy"></div><div class="product-body"><div class="product-kicker"><span>'+p.category+'</span><span>Consultar</span></div><h3>'+p.name+'</h3><div class="product-actions"><span class="consult-price">'+p.meta+'</span><button class="add-btn" data-add="'+p.id+'">Agregar +</button></div></div></article>'}).join("");
+  var groups=activeFilter==="Todos"?["Puertas","Ventanas"]:[activeFilter];
+  q("#productGrid").innerHTML=groups.map(function(group){
+    var list=products.filter(function(p){return p.group===group});
+    if(!list.length)return "";
+    return '<section class="catalog-group"><div class="catalog-group-head"><span class="eyebrow">'+(group==="Puertas"?"01 · PUERTAS":"02 · VENTANAS")+'</span><h3>'+group+'</h3><span class="catalog-count">'+list.length+' modelos</span></div><div class="product-grid catalog-group-grid">'+renderProductCards(list)+'</div></section>';
+  }).join("");
   qa("[data-add]").forEach(function(b){b.onclick=function(){addToCart(b.getAttribute("data-add"));b.textContent="Agregado ✓";setTimeout(function(){b.textContent="Agregar +"},900)}})
 }
 function addToCart(id){var item=cart.find(function(x){return x.id===id});if(item)item.qty++;else cart.push({id:id,qty:1});persistCart();openCart()}
@@ -545,7 +565,7 @@ renderAgenda();renderFilters();renderProducts();renderCart();render();if(new URL
 const ROBOTS = 'User-agent: *\nAllow: /\n\nSitemap: https://aberturasavenida.simondalmasso44.workers.dev/sitemap.xml\n';
 const SITEMAP = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>https://aberturasavenida.simondalmasso44.workers.dev/</loc>\n  </url>\n</urlset>\n';
 const LLMS = '# Aberturas Avenida\n\nSitio de Aberturas Avenida en Santa Fe, Argentina.\n\n## Contenido\n\n- Inicio: acceso a Revisión y Productos.\n- Revisión: prepara una visita con foto, medidas orientativas por unidad, material, acceso y contacto.\n- Productos: catálogo orientativo sin pago online; el pedido se coordina por WhatsApp.\n- Las medidas cargadas por el cliente son orientativas. La medición final se completa en obra.\n\n## Enlace principal\n\n- [Aberturas Avenida](https://aberturasavenida.simondalmasso44.workers.dev/)\n';
-const BRAND_URL = "https://raw.githubusercontent.com/simondalmasso/AberturasAvenida/main/public/brand/avenida-logo.png";
+const BRAND_URL = "/brand/avenida-logo.png";
 
 const baseHeaders = {
   "x-content-type-options":"nosniff",
