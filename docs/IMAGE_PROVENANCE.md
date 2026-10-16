@@ -1,34 +1,32 @@
 # Image provenance and processing
 
-## Images supplied for Aberturas Avenida
+## Photos supplied for Aberturas Avenida
 
-The product visuals for doors, portones and windows are crops from the seven catalog-page PNGs supplied by the user and found in C:\\Users\\Simon\\Downloads on 2026-10-16. The source pages are not committed; only the optimized WebP crops are included in the repository.
+The door, gate and window visuals are crops from the seven catalog-page photos supplied by the user and stored in C:\Users\Simon\Downloads on 2026-10-16. The original pages are photographed printed catalogs; their source resolution limits the fine detail. The assets use direct, model-specific crops, restrained contrast/color correction and sharpening. No product geometry was generated or reconstructed, and no unrelated manufacturer's product photo is presented as an exact store model.
 
 | Output | Source page | Catalog item |
 |---|---|---|
-| products/puerta-placa.webp | 20261016_152226.png | Puerta placa, model M158 |
-| products/puerta-m118.webp | 20261016_152236.png | Door model M118 |
+| products/puerta-placa.webp | 20261016_152226.png | Puerta placa M158; metadata references M157/M158 |
+| products/puerta-m118.webp | 20261016_152236.png | Puerta M118 |
 | products/puerta-madera-m4.webp | 20261016_152245.png | M4 tableros |
-| products/puerta-chapa-m218.webp | 20261016_152252.png | Door model M218 |
-| products/porton-aluminio-negro.webp | 20261016_152306.png | Black aluminum porton, smooth panel with aluminum inserts |
-| products/porton-aluminio-blanco.webp | 20261016_152306.png | White aluminum porton, tubular panel |
-| products/puerta-ventana-apaisada.webp | 20261016_152306.png | Puerta ventana, horizontal glass panels |
-| products/ventana-corrediza-entera.webp | 20261016_152306.png | Sliding window, full glass |
-
-The catalog crops were tightly reframed, color/contrast corrected, sharpened conservatively, and extended with a blurred version of the same source crop to hide hard crop edges. The product geometry was not generatively reconstructed or changed. The source is a photograph of printed catalog pages, so some fine detail remains limited by the original print/photo resolution.
+| products/puerta-chapa-m218.webp | 20261016_152257.png | Puerta M218 |
+| products/porton-aluminio-negro.webp | 20261016_152306.png | Portón aluminio negro, tablero liso con insertos de aluminio |
+| products/porton-aluminio-blanco.webp | 20261016_152306.png | Portón aluminio blanco, tablero tubular |
+| products/puerta-ventana-apaisada.webp | 20261016_152306.png | Puerta ventana, vidrio apaisado |
+| products/ventana-corrediza-entera.webp | 20261016_152306.png | Ventana corrediza, vidrio entero |
 
 ## Reference images for roller curtain and mosquito screen
 
-The supplied catalog pages did not contain a clean standalone image for a roller curtain or mosquito screen. These two images are adapted from the Magic Roll website:
+The supplied catalog pages did not contain clean standalone photos for these two products. These are reference images adapted from Magic Roll:
 
 - products/cortina-roller.webp — https://www.magic-roll.com/img/screen/slider.jpg
 - products/mosquitera-enrollable.webp — https://www.magic-roll.com/img/mosquitero.jpg
 
-These are **representative reference images**, not confirmation that Magic Roll is Lucho's supplier or that the pictured models are the exact models sold at the store. The visible product metadata says “Referencia visual · confirmar modelo”. Replace them with Lucho's own photos or supplier-approved assets when available.
+They are explicitly labeled in the catalog as visual references whose exact model/supplier must be confirmed. They are not represented as verified photos of Lucho's stock.
 
 ## Category images
 
-The category thumbnails in public/categories/ are generated from the local product assets so category names and pictures remain aligned and no remote image requests are required for the catalog.
+The four local category thumbnails are generated from the corresponding local product crops. All product and category assets are served locally by the Cloudflare Worker; the catalog does not fetch product images from third-party hosts.
 
 ## Hero image
 
