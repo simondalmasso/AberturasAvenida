@@ -376,14 +376,14 @@ var S={step:0,type:null,photo:null,photoQuality:null,complete:false,qty:1,measur
 var live=null;
 
 var products=[
-  {id:"puerta-placa",name:"Puerta placa",group:"Puertas",category:"Puertas",meta:"Modelos M157 / M158",img:"/products/puerta-placa.webp"},
+  {id:"puerta-placa",name:"Puerta placa",group:"Puertas",category:"Puertas",meta:"Ilustración de catálogo · consultar variante M157 / M158",img:"/products/puerta-placa.webp"},
   {id:"puerta-m118",name:"Puerta M118",group:"Puertas",category:"Puertas",meta:"Modelo de catálogo · consultar",img:"/products/puerta-m118.webp"},
-  {id:"puerta-madera",name:"Puerta de madera",group:"Puertas",category:"Puertas",meta:"M4 tableros · catálogo",img:"/products/puerta-madera-m4.webp"},
+  {id:"puerta-madera",name:"Puerta de madera",group:"Puertas",category:"Puertas",meta:"Ilustración de catálogo · M4 tableros",img:"/products/puerta-madera-m4.webp"},
   {id:"puerta-chapa",name:"Puerta M218",group:"Puertas",category:"Puertas",meta:"Modelo de catálogo · consultar",img:"/products/puerta-chapa-m218.webp"},
-  {id:"porton",name:"Portón de aluminio",group:"Puertas",category:"Portones",meta:"Modelos blanco / negro · catálogo",img:"/products/porton-aluminio-blanco.webp",wide:true},
-  {id:"porton-negro",name:"Portón de aluminio · negro",group:"Puertas",category:"Portones",meta:"Tablero liso con insertos · catálogo",img:"/products/porton-aluminio-negro.webp",wide:true},
-  {id:"ventana-modena",name:"Ventana corrediza",group:"Ventanas",category:"Ventanas",meta:"Vidrio entero · catálogo",img:"/products/ventana-corrediza-entera.webp",wide:true},
-  {id:"cerramiento",name:"Puerta ventana",group:"Ventanas",category:"Cerramientos",meta:"Vidrio apaisado · catálogo",img:"/products/puerta-ventana-apaisada.webp",wide:true},
+  {id:"porton",name:"Portón de aluminio",group:"Puertas",category:"Portones",meta:"Ilustración de catálogo · modelos blanco / negro",img:"/products/porton-aluminio-blanco.webp",wide:true},
+  {id:"porton-negro",name:"Portón de aluminio · negro",group:"Puertas",category:"Portones",meta:"Ilustración de catálogo · tablero liso con insertos",img:"/products/porton-aluminio-negro.webp",wide:true},
+  {id:"ventana-modena",name:"Ventana corrediza",group:"Ventanas",category:"Ventanas",meta:"Ilustración de catálogo · vidrio entero",img:"/products/ventana-corrediza-entera.webp",wide:true},
+  {id:"cerramiento",name:"Puerta ventana",group:"Ventanas",category:"Cerramientos",meta:"Ilustración de catálogo · vidrio apaisado",img:"/products/puerta-ventana-apaisada.webp",wide:true},
   {id:"mosquitero",name:"Mosquitero enrollable",group:"Ventanas",category:"Complementos",meta:"Referencia visual · confirmar modelo",img:"/products/mosquitera-enrollable.webp",wide:true},
   {id:"cortina",name:"Cortina roller",group:"Ventanas",category:"Complementos",meta:"Referencia visual · confirmar modelo",img:"/products/cortina-roller.webp",wide:true}
 ];
