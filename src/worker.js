@@ -17,9 +17,6 @@ const HTML = String.raw`<!doctype html>
 <meta name="twitter:card" content="summary_large_image">
 <title>Aberturas Avenida | Puertas, ventanas y aberturas en Santa Fe</title>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","@id":"https://aberturasavenida.simondalmasso44.workers.dev/#business","name":"Aberturas Avenida","url":"https://aberturasavenida.simondalmasso44.workers.dev/","telephone":"+54 9 3425 23-6559","areaServed":"Santa Fe, Argentina","sameAs":["https://www.instagram.com/aberturasavenida.sf/"]}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#F4F1EB;
@@ -85,7 +82,7 @@ button:disabled{opacity:.42;cursor:not-allowed}
 .review-layout{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);gap:28px;align-items:start;min-width:0}.review-layout>*{min-width:0}
 .review-aside{position:sticky;top:106px;border-radius:26px;color:#fff;padding:0;overflow:hidden;min-height:520px;background:
 linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.58)),
-url("https://images.pexels.com/photos/13573495/pexels-photo-13573495.jpeg?auto=compress&cs=tinysrgb&w=1400") center/cover no-repeat}
+url("/categories/cerramiento.webp") center/cover no-repeat}
 .review-aside-label{position:absolute;left:22px;right:22px;bottom:22px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
 .review-aside-label span{font-family:var(--serif);font-size:48px;line-height:.9}
 .review-aside-label b{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.72)}
@@ -113,7 +110,7 @@ url("https://images.pexels.com/photos/13573495/pexels-photo-13573495.jpeg?auto=c
 .btn:hover:not(:disabled){transform:translateY(-1px)}
 .btn.alt{background:transparent;color:var(--ink);border-color:var(--line)}
 .btn.green{background:var(--green);border-color:var(--green)}
-.field{margin-top:14px}
+.field{margin-top:14px}.skip-measures{width:100%;margin-top:10px;min-height:44px}
 .field label,.field-title{display:block;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:6px}
 input,select{width:100%;min-height:48px;border:1px solid var(--line);border-radius:14px;background:#fff;padding:11px 13px}
 .input-wrap{position:relative}
@@ -175,7 +172,7 @@ input,select{width:100%;min-height:48px;border:1px solid var(--line);border-radi
 .product-card:hover{transform:translateY(-3px)}
 .product-media{aspect-ratio:4/5;overflow:hidden;background:#E7E0D5;border-radius:24px}
 .product-card.wide .product-media{aspect-ratio:4/3}
-.product-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.product-media img{width:100%;height:100%;object-fit:contain;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
 .product-card:hover img{transform:scale(1.03)}
 .product-body{padding:11px 2px 4px}
 .product-kicker{display:flex;justify-content:space-between;gap:8px;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
@@ -262,7 +259,7 @@ input,select{width:100%;min-height:48px;border:1px solid var(--line);border-radi
 <main class="shell">
   <section class="view on" id="homeView">
     <div class="home-hero">
-      <img class="hero-image" crossorigin="anonymous" src="https://images.pexels.com/photos/12792317/pexels-photo-12792317.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/12792317/pexels-photo-12792317.jpeg?auto=compress&cs=tinysrgb&w=720 720w, https://images.pexels.com/photos/12792317/pexels-photo-12792317.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w, https://images.pexels.com/photos/12792317/pexels-photo-12792317.jpeg?auto=compress&cs=tinysrgb&w=1800 1800w" sizes="100vw" fetchpriority="high" alt="">
+      <img class="hero-image" src="/categories/cerramiento.webp" fetchpriority="high" decoding="async" alt="Ilustración de cerramiento">
       <div class="hero-copy">
         <div class="eyebrow">Aberturas Avenida · Santa Fe</div>
         <h1>Abrí tu casa a <em>algo mejor.</em></h1>
@@ -375,7 +372,7 @@ var slots=[
   {date:futureWeekday(3),time:"18:00",cap:90}
 ];
 
-var S={step:0,type:null,photo:null,photoQuality:null,complete:false,qty:1,measurements:[{w:"",h:""}],material:"Aluminio",need:"Reparación",zone:"Santa Fe",access:"Planta baja",name:"",phone:"",duration:45,status:null,reasons:[],slot:null,sent:false,confirmed:false};
+var S={step:0,type:null,photo:null,photoQuality:null,complete:false,qty:1,measurements:[{w:"",h:""}],measurementsSkipped:false,material:"Aluminio",need:"Reparación",zone:"Santa Fe",access:"Planta baja",name:"",phone:"",duration:45,status:null,reasons:[],slot:null,sent:false,confirmed:false};
 var live=null;
 
 var products=[
@@ -420,10 +417,10 @@ function syncMeasureInputs(){
   ensureMeasurements(S.qty);
   for(var i=0;i<S.qty;i++){var wi=q('[data-mw="'+i+'"]');var hi=q('[data-mh="'+i+'"]');if(wi)S.measurements[i].w=wi.value;if(hi)S.measurements[i].h=hi.value}
 }
-function measurementSummary(ms,qty){return(ms||[]).slice(0,qty).map(function(m,i){return(qty>1?"U"+(i+1)+" ":"")+esc(m.w)+" × "+esc(m.h)+" cm"}).join(" · ")}
+function measurementSummary(ms,qty){if(S.measurementsSkipped)return "Pendiente: medir durante la visita";var out=(ms||[]).slice(0,qty).map(function(m,i){return(qty>1?"U"+(i+1)+" ":"")+esc(m.w)+" × "+esc(m.h)+" cm"}).join(" · ");return out||"Pendiente: medir durante la visita"}
 function calc(){
   ensureMeasurements(S.qty); var r=[];
-  S.measurements.forEach(function(m,i){var w=parseFloat(String(m.w).replace(",","."));var h=parseFloat(String(m.h).replace(",","."));
+  if(!S.measurementsSkipped)S.measurements.forEach(function(m,i){var w=parseFloat(String(m.w).replace(",","."));var h=parseFloat(String(m.h).replace(",","."));
     if(isFinite(w)&&isFinite(h)&&(w<30||h<30||w>270||h>270))r.push((S.qty>1?"Unidad "+(i+1)+": ":"")+"Medida fuera del rango estándar de visita")
   });
   if(S.access==="Acceso exterior complejo")r.push("Acceso exterior complejo");
@@ -453,7 +450,7 @@ function measuresStep(){
   ensureMeasurements(S.qty);
   var qtyOptions=[1,2,3].map(function(n){return '<option '+(S.qty===n?"selected":"")+'>'+n+'</option>'}).join("");
   var mh=S.measurements.map(function(m,i){return '<div class="measure-unit"><div class="measure-unit-title">Unidad '+(i+1)+'</div><div class="measure-grid"><div class="field"><label>Ancho aproximado</label><div class="input-wrap"><input data-mw="'+i+'" inputmode="decimal" value="'+esc(m.w)+'"><span class="unit">cm</span></div></div><div class="field"><label>Alto aproximado</label><div class="input-wrap"><input data-mh="'+i+'" inputmode="decimal" value="'+esc(m.h)+'"><span class="unit">cm</span></div></div></div></div>'}).join("");
-  return '<div class="step-label">03 · Medidas orientativas</div><h2>Una medida por cada unidad.</h2><p class="lede">Ancho y alto aproximados. La medición final se hace en obra.</p><div class="tech-figure"><svg viewBox="0 0 110 86" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="21" y="10" width="68" height="58"/><path d="M16 75h78M16 72v6M94 72v6M12 10v58M9 10h6M9 68h6"/><path d="M55 10v58"/></svg><div><b>Guía rápida</b><p>Ancho: de lado a lado. Alto: de apoyo a dintel.</p></div></div><div class="field"><label>Cantidad de unidades</label><select id="measureQty">'+qtyOptions+'</select></div>'+mh+'<div class="measure-note"><b>Orientativo:</b> estos datos sirven para preparar la visita y no se usan como medidas de fabricación.</div><div class="actions"><button class="btn alt" data-prev>Atrás</button><button class="btn" data-measures '+(measurementsComplete()?"":"disabled")+'>Continuar</button></div>';
+  return '<div class="step-label">03 · Medidas orientativas · opcional</div><h2>¿Tenés las medidas a mano?</h2><p class="lede">Podés cargarlas ahora o dejar que el técnico mida durante la visita. No hace falta frenar la consulta.</p><div class="tech-figure"><svg viewBox="0 0 110 86" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="21" y="10" width="68" height="58"/><path d="M16 75h78M16 72v6M94 72v6M12 10v58M9 10h6M9 68h6"/><path d="M55 10v58"/></svg><div><b>Guía rápida</b><p>Ancho: de lado a lado. Alto: de apoyo a dintel.</p></div></div><div class="field"><label>Cantidad de unidades</label><select id="measureQty">'+qtyOptions+'</select></div>'+mh+'<div class="measure-note"><b>Orientativo:</b> estos datos sirven para preparar la visita y no se usan como medidas de fabricación.</div><div class="actions"><button class="btn alt" data-prev>Atrás</button><button class="btn" data-measures '+(measurementsComplete()?"":"disabled")+'>Continuar</button></div><button class="btn alt skip-measures" data-skip-measures type="button">No sé las medidas — coordinar en la visita</button>';
 }
 function detailStep(){
   var mats=["Aluminio","Madera","Hierro","PVC","No estoy seguro/a"];var needs=["Reparación","Reemplazo","Ajuste","Revisión general"];
@@ -465,7 +462,7 @@ function accessStep(){
   function opts(a,v){return a.map(function(x){return '<option '+(x===v?"selected":"")+'>'+x+'</option>'}).join("")}
   return '<div class="step-label">05 · Acceso y contacto</div><h2>¿Dónde tenemos que medir?</h2><p class="lede">Con el acceso y un contacto dejamos la visita preparada.</p><div class="measure-grid"><div class="field"><label>Localidad</label><select id="zone">'+opts(zones,S.zone)+'</select></div><div class="field"><label>Acceso</label><select id="access">'+opts(accesses,S.access)+'</select></div></div><div class="field"><label>Nombre</label><input id="name" value="'+esc(S.name)+'"></div><div class="field"><label>Teléfono</label><input id="phone" inputmode="tel" value="'+esc(S.phone)+'"></div><div class="actions"><button class="btn alt" data-prev>Atrás</button><button class="btn" data-access>Preparar visita</button></div>';
 }
-function summaryRows(){return '<div class="summary"><div class="summary-row"><b>Abertura</b><span>'+esc(S.type)+' · '+esc(S.material)+' · '+S.qty+' u.</span></div><div class="summary-row"><b>Orientativo</b><span>'+measurementSummary(S.measurements,S.qty)+'</span></div><div class="summary-row"><b>Acceso</b><span>'+esc(S.zone)+' · '+esc(S.access)+'</span></div><div class="summary-row"><b>Duración</b><span>'+S.duration+' min estimados</span></div></div>'}
+function summaryRows(){return '<div class="summary"><div class="summary-row"><b>Abertura</b><span>'+esc(S.type)+' · '+esc(S.material)+' · '+S.qty+' u.</span></div><div class="summary-row"><b>Medidas</b><span>'+measurementSummary(S.measurements,S.qty)+'</span></div><div class="summary-row"><b>Acceso</b><span>'+esc(S.zone)+' · '+esc(S.access)+'</span></div><div class="summary-row"><b>Duración</b><span>'+S.duration+' min estimados</span></div></div>'}
 function resultStep(){
   calc();
   if(S.confirmed)return '<div class="step-label">06 · Confirmado</div><div class="result"><span class="stamp green">LISTO</span><h2>La visita quedó confirmada.</h2><p class="result-copy">'+esc(S.slot)+' · '+S.duration+' min. Tus medidas siguen marcadas como orientativas.</p>'+summaryRows()+'<div class="receipt"><b>Pedido AV-2521 preparado.</b><p>El técnico completa la medición final en obra.</p></div><div class="actions"><button class="btn alt" data-prev>Revisar</button><button class="btn" data-home>Inicio</button></div></div>';
@@ -484,8 +481,9 @@ function wireWizard(){
   var complete=q("#complete");if(complete)complete.onchange=function(){S.complete=complete.checked;render()};
   var pb=q("[data-photo]");if(pb)pb.onclick=function(){if(S.photo&&S.photoQuality&&S.photoQuality.ok&&S.complete){S.step=2;render()}};
   var mq=q("#measureQty");if(mq)mq.onchange=function(){syncMeasureInputs();S.qty=parseInt(mq.value,10);ensureMeasurements(S.qty);render()};
-  qa("[data-mw],[data-mh]").forEach(function(inp){inp.oninput=function(){syncMeasureInputs();var b=q("[data-measures]");if(b)b.disabled=!measurementsComplete()}});
-  var mb=q("[data-measures]");if(mb)mb.onclick=function(){syncMeasureInputs();if(measurementsComplete()){S.step=3;render()}};
+  qa("[data-mw],[data-mh]").forEach(function(inp){inp.oninput=function(){S.measurementsSkipped=false;syncMeasureInputs();var b=q("[data-measures]");if(b)b.disabled=!measurementsComplete()}});
+  var mb=q("[data-measures]");if(mb)mb.onclick=function(){syncMeasureInputs();if(measurementsComplete()){S.measurementsSkipped=false;S.step=3;render()}};
+  var sm=q("[data-skip-measures]");if(sm)sm.onclick=function(){S.measurementsSkipped=true;S.measurements=Array.from({length:S.qty},function(){return{w:"",h:""}});S.step=3;render()};
   var db=q("[data-detail]");if(db)db.onclick=function(){S.material=q("#material").value;S.need=q("#need").value;S.step=4;render()};
   var ab=q("[data-access]");if(ab)ab.onclick=function(){S.zone=q("#zone").value;S.access=q("#access").value;S.name=q("#name").value||"Cliente";S.phone=q("#phone").value;calc();S.step=5;render()};
   qa("[data-slot]").forEach(function(b){b.onclick=function(){S.slot=b.getAttribute("data-slot");render()}});
@@ -494,7 +492,7 @@ function wireWizard(){
   var sn=q("[data-send-noslot]");if(sn)sn.onclick=function(){S.sent=true;live=makeJob("sin-turno");render()};
   qa("[data-home]").forEach(function(b){b.onclick=function(){showView("home")}});
 }
-function makeJob(status){var ms=S.measurements.map(function(m){return{w:m.w,h:m.h}});return{id:"AV-2521",name:S.name,zone:S.zone,type:S.type,material:S.material,measurements:ms,qty:S.qty,access:S.access,need:S.need,duration:S.duration,status:status,slot:S.slot,photo:S.photo,reasons:S.reasons.slice()}}
+function makeJob(status){var ms=S.measurementsSkipped?[]:S.measurements.map(function(m){return{w:m.w,h:m.h}});return{id:"AV-2521",name:S.name,zone:S.zone,type:S.type,material:S.material,measurements:ms,measurementsSkipped:S.measurementsSkipped,qty:S.qty,access:S.access,need:S.need,duration:S.duration,status:status,slot:S.slot,photo:S.photo,reasons:S.reasons.slice()}}
 function reset(){S={step:0,type:null,photo:null,photoQuality:null,complete:false,qty:1,measurements:[{w:"",h:""}],material:"Aluminio",need:"Reparación",zone:"Santa Fe",access:"Planta baja",name:"",phone:"",duration:45,status:null,reasons:[],slot:null,sent:false,confirmed:false};live=null;render();showView("review")}
 q("#new").onclick=reset;
 
@@ -513,7 +511,7 @@ function jobs(){
 }
 function sheet(j){
   var photo=j.photo?'<img src="'+j.photo+'" alt="Foto del pedido">':'<div class="placeholder">FOTO DEL PEDIDO<br>sin imagen en demo</div>';
-  var measures=(j.measurements||[]).map(function(m,i){return '<div class="measure-box"><b>Unidad '+(i+1)+' · ancho informado</b><strong>'+esc(m.w)+' cm</strong></div><div class="measure-box"><b>Unidad '+(i+1)+' · alto informado</b><strong>'+esc(m.h)+' cm</strong></div>'}).join("");
+  var measures=j.measurementsSkipped?"<div class=\"measure-box\"><b>Medición pendiente</b><strong>A completar en visita</strong></div>":(j.measurements||[]).map(function(m,i){return '<div class="measure-box"><b>Unidad '+(i+1)+' · ancho informado</b><strong>'+esc(m.w)+' cm</strong></div><div class="measure-box"><b>Unidad '+(i+1)+' · alto informado</b><strong>'+esc(m.h)+' cm</strong></div>'}).join("");
   q("#sheet").innerHTML='<article class="sheet"><div class="sheet-top"><div class="sheet-brand"><img src="/brand/avenida-logo.png" alt=""><div><div class="eyebrow">Aberturas Avenida</div><h2>Ficha de medición</h2></div></div><div class="sheet-code">TRABAJO '+esc(j.id)+'<br>'+statusName(j.status)+'<br>'+j.duration+' MIN</div></div><div class="sheet-grid"><div class="sheet-photo">'+photo+'</div><div class="sheet-data"><div class="sheet-row"><b>Cliente</b><span>'+esc(j.name)+'</span></div><div class="sheet-row"><b>Localidad</b><span>'+esc(j.zone)+'</span></div><div class="sheet-row"><b>Abertura</b><span>'+esc(j.type)+'</span></div><div class="sheet-row"><b>Material</b><span>'+esc(j.material)+'</span></div><div class="sheet-row"><b>Cantidad</b><span>'+j.qty+' u.</span></div><div class="sheet-row"><b>Acceso</b><span>'+esc(j.access)+'</span></div><div class="sheet-row"><b>Necesidad</b><span>'+esc(j.need)+'</span></div></div></div><section class="band"><h3>INFORMADO POR EL CLIENTE — ORIENTATIVO</h3><div class="orientative">'+measures+'</div><p class="sheet-note">Datos orientativos para preparar la visita. No son medidas de fabricación.</p></section><section class="band black"><h3>MEDICIÓN FINAL EN OBRA — A COMPLETAR POR EL TÉCNICO</h3><div class="final-grid"><div class="final-box"><b>Ancho final</b><div></div></div><div class="final-box"><b>Alto final</b><div></div></div><div class="final-box"><b>Marco / premarco</b><div></div></div><div class="final-box"><b>Sentido / apertura</b><div></div></div><div class="final-box"><b>Material confirmado</b><div></div></div><div class="final-box"><b>Observaciones</b><div></div></div><div class="final-box"><b>Técnico / firma</b><div></div></div><div class="final-box"><b>Fecha</b><div></div></div></div></section><div class="sheet-actions"><button class="btn alt" onclick="window.print()">Imprimir ficha</button></div></article>';
   q("#sheet").scrollIntoView({behavior:"smooth",block:"start"});
 }
