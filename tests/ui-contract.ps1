@@ -50,4 +50,10 @@ if ($src -match 'raw.githubusercontent.com/simondalmasso/AberturasAvenida/main/p
 if ($productBlock -match 'group:"(?!Puertas|Ventanas)[^"]+"') { throw "Unexpected third catalog group found" }
 if ($src -notmatch '01 · PUERTAS' -or $src -notmatch '02 · VENTANAS') { throw "Catalog group headings must clearly say Puertas / Ventanas" }
 
+# Performance and optional-measurement intake.
+if ($src -match 'fonts\.googleapis\.com|fonts\.gstatic\.com') { throw "External font requests must not block first render" }
+if ($src -notmatch 'data-skip-measures') { throw "Customers must be able to continue without dimensions" }
+if ($src -notmatch 'measurementsSkipped') { throw "Missing optional-measurement state" }
+if ($src -notmatch 'Pendiente: medir durante la visita') { throw "Missing clear pending-measurement summary" }
+
 Write-Output "UI contract OK"
