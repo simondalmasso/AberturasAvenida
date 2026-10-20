@@ -259,7 +259,7 @@ input,select{width:100%;min-height:48px;border:1px solid var(--line);border-radi
 <main class="shell">
   <section class="view on" id="homeView">
     <div class="home-hero">
-      <img class="hero-image" src="/categories/cerramiento.webp" fetchpriority="high" decoding="async" alt="Ilustración de cerramiento">
+      <img class="hero-image" src="/categories/home-banner.svg" fetchpriority="high" decoding="async" alt="Fachada contemporánea con puerta corrediza de aluminio negro y ventana blanca">
       <div class="hero-copy">
         <div class="eyebrow">Aberturas Avenida · Santa Fe</div>
         <h1>Abrí tu casa a <em>algo mejor.</em></h1>
