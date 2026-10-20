@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+<title id="title">Fachada contemporánea con aberturas de aluminio</title>
+<desc id="desc">Fachada moderna con puerta corrediza de aluminio negro y ventana blanca sobre muros cálidos.</desc>
+<defs>
+  <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9e2d7"/><stop offset="1" stop-color="#cfc3b4"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a8c2c5"/><stop offset=".45" stop-color="#5f7b7e"/><stop offset="1" stop-color="#273e43"/></linearGradient>
+  <linearGradient id="dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#141817" stop-opacity=".88"/><stop offset=".48" stop-color="#141817" stop-opacity=".45"/><stop offset="1" stop-color="#141817" stop-opacity="0"/></linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b7ad9e"/><stop offset="1" stop-color="#817c70"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur stdDeviation="20"/></filter>
+  <pattern id="grain" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M0 20H80M0 59H80" stroke="#fff" stroke-opacity=".055"/></pattern>
+</defs>
+<rect width="1920" height="1080" fill="#c9c1b5"/>
+<rect width="1920" height="860" fill="url(#wall)"/>
+<path d="M0 0H1920V110L0 265Z" fill="#f4efe7" opacity=".48"/>
+<path d="M0 860L1920 790V1080H0Z" fill="url(#ground)"/>
+<path d="M0 900L1920 835" stroke="#eee5d8" stroke-width="5" opacity=".42"/>
+<ellipse cx="1260" cy="890" rx="650" ry="90" fill="#171b1a" opacity=".25" filter="url(#shadow)"/>
+<!-- right-side architectural facade -->
+<path d="M620 120L1660 70L1920 150V845L620 900Z" fill="#e6ded2"/>
+<path d="M620 120L1660 70L1660 128L620 180Z" fill="#f8f3eb"/>
+<path d="M1660 70L1920 150V204L1660 128Z" fill="#c9bdae"/>
+<!-- recessed black aluminium sliding door -->
+<path d="M970 250L1510 220L1510 830L970 856Z" fill="#1c2424"/>
+<path d="M994 273L1232 260L1232 832L994 844Z" fill="url(#glass)"/>
+<path d="M1250 259L1485 246L1485 831L1250 832Z" fill="url(#glass)"/>
+<path d="M1005 300L1220 288L1220 350L1005 362Z" fill="#d9e3dd" opacity=".18"/>
+<path d="M1263 284L1474 273L1474 340L1263 351Z" fill="#d9e3dd" opacity=".16"/>
+<path d="M1030 390L1190 381L1190 780L1030 789Z" fill="#b6d0ce" opacity=".13"/>
+<path d="M1280 375L1455 365L1455 780L1280 788Z" fill="#b6d0ce" opacity=".1"/>
+<path d="M1241 257L1241 834" stroke="#121818" stroke-width="12"/>
+<path d="M1488 246L1488 831" stroke="#090e0e" stroke-width="8"/>
+<path d="M1000 273L1000 844" stroke="#707a78" stroke-width="4" opacity=".8"/>
+<path d="M1288 452L1288 575" stroke="#d6d1c7" stroke-width="6" stroke-linecap="round"/>
+<path d="M1296 452L1296 575" stroke="#202a2a" stroke-width="3" stroke-linecap="round"/>
+<!-- white aluminium window -->
+<path d="M1580 265L1840 290L1840 650L1580 631Z" fill="#f7f5f0" stroke="#d4ccc0" stroke-width="10"/>
+<path d="M1597 284L1700 294L1700 624L1597 617Z" fill="url(#glass)"/>
+<path d="M1716 295L1823 305L1823 632L1716 625Z" fill="url(#glass)"/>
+<path d="M1707 292L1707 625" stroke="#f7f5f0" stroke-width="12"/>
+<path d="M1600 309L1690 318L1690 360L1600 351Z" fill="#e5efea" opacity=".24"/>
+<path d="M1727 321L1813 329L1813 370L1727 362Z" fill="#e5efea" opacity=".2"/>
+<path d="M1571 253L1850 279" stroke="#fff" stroke-width="14" opacity=".9"/>
+<!-- vertical cladding -->
+<path d="M680 205L900 193V835L680 846Z" fill="#d6c9b8"/>
+<path d="M710 210V844M740 208V843M770 207V841M800 204V839M830 202V838M860 200V836M890 198V834" stroke="#b8aa98" stroke-width="3" opacity=".6"/>
+<path d="M650 880L1900 815" stroke="#f8f0e4" stroke-width="10" opacity=".28"/>
+<!-- foliage, intentionally subtle -->
+<g fill="#52675b" opacity=".7"><ellipse cx="1800" cy="790" rx="82" ry="120"/><ellipse cx="1870" cy="744" rx="60" ry="102"/><ellipse cx="1734" cy="740" rx="55" ry="90"/></g>
+<g fill="#87917a" opacity=".8"><ellipse cx="1815" cy="740" rx="35" ry="70"/><ellipse cx="1874" cy="690" rx="30" ry="63"/><ellipse cx="1755" cy="700" rx="28" ry="58"/></g>
+<rect width="1920" height="1080" fill="url(#grain)"/>
+<rect width="1920" height="1080" fill="url(#dark)"/>
+<path d="M0 0H1920V12H0Z" fill="#b69a73" opacity=".65"/>
+</svg>
